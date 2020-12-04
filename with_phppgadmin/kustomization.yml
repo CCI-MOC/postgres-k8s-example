@@ -1,0 +1,9 @@
+bases:
+  - ../base
+
+resources:
+  - service.yml
+  - route.yml
+
+patchesStrategicMerge:
+  - deployment-with-phppgadmin.yml

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-example
+spec:
+  template:
+    spec:
+      containers:
+        - name: phppgadmin
+          image: bitnami/phppgadmin
+          ports:
+            - containerPort: 8080
+              name: http
+            - containerPort: 8443
+              name: https
+          env:
+            - name: DATABASE_HOST
+              value: localhost

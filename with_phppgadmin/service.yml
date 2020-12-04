@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: phppgadmin
+  labels:
+    app: postgres
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+  selector:
+    app: postgres
