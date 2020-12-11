@@ -1,0 +1,9 @@
+namespace: lars-sandbox
+commonLabels:
+  app: postgres-example
+
+bases:
+  - ../with_phppgadmin/
+
+patchesStrategicMerge:
+  - secret.yml

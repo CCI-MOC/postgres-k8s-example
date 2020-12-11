@@ -1,0 +1,20 @@
+- op: add
+  path: /spec/template/spec/volumes/-
+  value:
+    name: postgres-config
+    configMap:
+      name: postgres-config
+
+- op: add
+  path: /spec/template/spec/containers/1/volumeMounts/-
+  value:
+    mountPath: /tmp/pg_hba.conf
+    name: postgres-config
+    subPath: pg_hba_conf
+
+- op: add
+  path: /spec/template/spec/containers/1/volumeMounts/-
+  value:
+    mountPath: /docker-entrypoint-initdb.d/install-pg-hba-conf.sh
+    name: postgres-config
+    subPath: install_pg_hba_conf

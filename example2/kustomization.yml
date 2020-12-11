@@ -1,0 +1,16 @@
+namespace: lars-sandbox
+commonLabels:
+  app: postgres-example
+
+bases:
+  - ../with_phppgadmin/
+
+resources:
+  - postgres-config.yml
+
+patches:
+  - path: secret.yml
+  - path: add-postgres-config.yml
+    target:
+      kind: Deployment
+      name: postgres-example

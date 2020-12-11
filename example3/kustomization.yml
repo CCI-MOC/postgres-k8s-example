@@ -1,0 +1,5 @@
+bases:
+  - ../example2/
+
+patches:
+  - path: use-pg-12.yml
