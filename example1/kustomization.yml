@@ -1,4 +1,4 @@
-namespace: lars-sandbox
+namespace: lars-sandbox-1
 commonLabels:
   app: postgres-example
 
